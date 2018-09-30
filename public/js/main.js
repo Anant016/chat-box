@@ -1,5 +1,5 @@
-
-var socket = io("http://localhost:3000");
+var config=require('../../config');
+var socket = io("http://localhost:${config.port}");
 
 socket.on("disconnect", function() {
     setTitle("Disconnected");
