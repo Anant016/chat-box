@@ -1,5 +1,5 @@
 var config=require('../../config');
-var socket = io("http://localhost:${config.port}");
+var socket =io.connect(window.location.hostname);
 
 socket.on("disconnect", function() {
     setTitle("Disconnected");
